@@ -1,28 +1,65 @@
-# HelloRails
-A simple web application to test the `rails new Project --database=postgresql command`.
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Blog-App
+
+> This is the Ruby on Rails application, in this project I will create a blog with ruby on rails with Postgresql database.
 
 ## Built With
 
-- Ruby version 3.0.3p157
-- Rails version 7.0.1
+- Ruby
+- Ruby on Rails
+- Git
+- Postgresql
 
 ## Getting Started
 
-**The project comes shipped with linters config for ruby, so ensure you have Rubocop**
-**installed on your local environment**
+To get a local copy up and running follow these simple example steps.
 
-- **Ensure you have postgresql, nodejs, ruby and rails set up on your machine**
-- **To get a local copy of the repository please run the following commands on your terminal:**
-- **$ git clone https://github.com/hamid-murambiwa/hello-rails.git**
-- **$ cd hellorails.**
-- **$ run `bundle install` to couple all dependacies**
-- **$ run `rails s`**
+- Copy Repo Link
+
+```
+https://github.com/hamid-murambiwa/Blog-App.git
+```
+- Get the directory that you want to clone the repository.
+
+- Open the command prompt in this directory.
+
+- Copy clone of the Repo
+
+```
+git clone https://github.com/hamid-murambiwa/Blog-App.git
+```
+
+- Go to the repository folder in your command prompt.
+
+```
+cd Blog-App
+```
+- Install bundles
+
+```
+bundle install
+```
+
+- rails s
+```
+
+
+
+### Prerequisites
+
+- Ruby
+- Ruby on Rails
+- Postgresql
+
+## Author
 
 👤 **Hamid Murambiwa**
 
 - GitHub: [@hamid-murambiwa](https://github.com/hamid-murambiwa/)
 - Twitter: [@Hamid87789454](https://twitter.com/Hamid87789454/)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/hamid-murambiwa/)
+
 
 ## 🤝 Contributing
 
@@ -35,6 +72,9 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- my dog Perry for the comforting lick here and there
+
+- This project built in Microverse's Fourth Module's Capstone.
+
 ## 📝 License
-- This project is [MIT](./LICENSE) licensed.
+
+This project is [MIT](./MIT.md) licensed.
