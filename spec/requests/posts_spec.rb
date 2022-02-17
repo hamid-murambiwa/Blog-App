@@ -24,11 +24,11 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-    it "renders 'index' template" do
+    it "renders 'show' template" do
       expect(response).to render_template('show')
     end
 
-    it "renders 'index' template with template in body" do
+    it "renders 'show' template with template in body" do
       expect(response.body).to match('Show')
     end
   end
