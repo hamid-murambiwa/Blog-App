@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "Posts", type: :request do
-  describe "GET index" do
+RSpec.describe 'Posts', type: :request do
+  describe 'GET index' do
     before(:example) { get 'htttp://localhost:3000/posts/index' }
 
-    it "is a success" do
+    it 'is a success' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -17,10 +19,10 @@ RSpec.describe "Posts", type: :request do
     end
   end
 
-  describe "GET show" do
+  describe 'GET show' do
     before(:example) { get 'htttp://localhost:3000/posts/show' }
 
-    it "is a success" do
+    it 'is a success' do
       expect(response).to have_http_status(:ok)
     end
 
