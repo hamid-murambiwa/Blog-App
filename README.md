@@ -38,15 +38,27 @@ cd Blog-App
 - Install bundles
 
 ```
-bundle install
+bundle install or bundle i
 ```
 
-- rails s
+- Run `rails new Project --database=postgresql` to create a new project with Postgresql database
+- Run `rails s` to run the code!
+- Run `rubocop` to find and fix linters
+- Run `rails db:migrate` for database setup
 ```
 
+## To run the tests
+
+Install rspec with:
+`bundle install`
+and
+`rails generate rpesc:install`
+
+Run tests with:
+`rspec spec`
 
 
-### Prerequisites
+## Prerequisites
 
 - Ruby
 - Ruby on Rails
