@@ -1,1 +1,14 @@
-<h1>Show Users</h1>
+<% @user.each do |user| %>
+    <img src=<%= user.photo %>><br>
+    <%= user.name %><br>
+    Number of posts: <%= user.posts_counter.to_i %><br>
+    Bio: <%= user.bio %><br>
+    <% @user_posts.each do |post| %>
+        <a href="">
+        <%= post.title %><br>
+        <%= post.text %><br>
+        Comments: <%= post.comments_counter %><br>
+        Likes: <%= post.likes_counter %><br>
+        <a>
+    <% end %>
+<% end %>
