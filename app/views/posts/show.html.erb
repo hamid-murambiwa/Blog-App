@@ -1,6 +1,7 @@
 <%= @post.title %> by <%= @user.name %><br>
 comments: <%= @post.comments_counter.to_i %>
-likes: <%= @post.likes_counter.to_i %><br>
+likes: <%= @post.likes_counter.to_i %>
+<br>
 <p><%= @post.text %></p>
 <% @comments.each do |comment| %>
     <% user = User.find(comment.user_id) %>

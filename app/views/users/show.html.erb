@@ -1,5 +1,5 @@
 <% @user.each do |user| %>
-    <img src=<%= user.photo %>><br>
+    <%= image_tag(user.photo, width:'150px', height:'200px') %><br>
     <%= user.name %><br>
     Number of posts: <%= user.posts_counter.to_i %><br>
     Bio: <%= user.bio %><br>
