@@ -4,7 +4,7 @@
     Number of posts: <%= user.posts_counter.to_i %><br>
     Bio: <%= user.bio %><br>
     <% @user_posts.each do |post| %>
-        <a href="">
+        <a href=<%= "http://127.0.0.1:3000/posts/index/?id=#{user.id}" %>>
         <%= post.title %><br>
         <%= post.text %><br>
         Comments: <%= post.comments_counter %><br>

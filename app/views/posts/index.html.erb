@@ -1,1 +1,12 @@
-<h1>Posts</h1>
+<img src=<%= @user.photo %>><br>
+<%= @user.name %><br>
+Number of posts: <%= @user.posts_counter.to_i %><br>
+<h1>Posts:</h1>
+<% @posts.each do |post| %>
+    <a href=<%= "http://127.0.0.1:3000/posts/show/?id=#{post.id}"%>>
+    <%= post.title %><br>
+    <%= post.text %><br>
+    comments: <%= post.comments_counter.to_i %><br>
+    likes: <%= post.likes_counter.to_i %><br>
+    </a>
+<% end %>

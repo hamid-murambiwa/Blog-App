@@ -1,7 +1,7 @@
 <% @users.each do |user| %>
-  <a href=<%= "show/?id=#{user.id}"%>>
-  photo: <img src=<%= user.photo %>><br>
-  Name: <%= user.name %><br>
+  <a href=<%= "users/show/?id=#{user.id}"%>>
+  <img src=<%= user.photo %>><br>
+  <%= user.name %><br>
   Number of posts: <%= user.posts_counter.to_i %><br>
   </a>
 <% end %>

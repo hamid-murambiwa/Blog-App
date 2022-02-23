@@ -1,1 +1,10 @@
-<h1>Show</h1>
+<%= @post.title %> by <%= @user.name %>
+comments: <%= @post.comments_counter %>
+likes: <%= @post.likes_counter %>
+<br>
+<p><%= @post.text %></p>
+<% @comments.each do |comment| %>
+    <% user = User.find(comment.user_id) %>
+    <%= user.name + ":" %>
+    <%= comment.text %>
+<% end %>
