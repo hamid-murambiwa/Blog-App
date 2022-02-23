@@ -1,7 +1,11 @@
-<% @users.each do |user| %>
-  <a href=<%= "users/show/?id=#{user.id}"%>>
-  <%= image_tag(user.photo, width:'150px', height:'200px') %><br>
-  <%= user.name %><br>
-  Number of posts: <%= user.posts_counter.to_i %><br>
-  </a>
-<% end %>
+<div>
+<section>
+  <% @users.each do |user| %>
+    <a href=<%= "users/show/?id=#{user.id}"%>>
+    <%= image_tag(user.photo, width:'150px', height:'200px') %>
+    <h1><%= user.name %></h1>
+    <p>Number of posts: <%= user.posts_counter.to_i %></p>
+    </a>
+  <% end %>
+</section>
+</div>

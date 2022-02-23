@@ -29,7 +29,7 @@ post4 = Post.create(user:third_user, title:"Venture Beat", text: 'Are you aware 
    video games and artificial intelligence to marketing, media, and transportation. Following the channels that are relevant to your professional and personal life allows you to save time while missing nothing.')
 
 comment1 = Comment.create(text:'Thank you very much for sharing your experience with us.', user: first_user, post:post1)
-comment2 = Comment.create(text:' We&#8217;re happy you are satisfied with the quality of our', user: second_user, post:post2)
+comment2 = Comment.create(text:"We're happy you are satisfied with the quality of our", user: second_user, post:post2)
 comment3 = Comment.create(text:'Thank you very much for sharing your experience with us', user: third_user, post:post3)
 comment4 = Comment.create(text:'We are really happy that your interaction with our brand was so positive', user: first_user, post:post3)
 comment5 = Comment.create(text:'I just want to let you know that we are acting upon your feedback to make some vital changes to the way we operate [list of changes].', user: second_user, post:post1)
