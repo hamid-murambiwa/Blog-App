@@ -1,1 +1,13 @@
-<h1>Show</h1>
+<div>
+    <h1><%= @post.title %> by <%= @user.name %><h1>
+    <p>comments: <%= @post.comments_counter.to_i %></p>
+    <p>likes: <%= @post.likes_counter.to_i %></p>
+    <p><%= @post.text %></p>
+    <section>
+        <% @comments.each do |comment| %>
+            <% user = User.find(comment.user_id) %>
+            <h2><%= user.name + ":" %></h2>
+            <p><%= comment.text %></p>
+    <% end %>
+    </section>
+</div>
