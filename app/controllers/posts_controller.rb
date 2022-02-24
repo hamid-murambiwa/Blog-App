@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def created
+  def create
     @post = Post.new(mass_params)
 
     if @post.save
