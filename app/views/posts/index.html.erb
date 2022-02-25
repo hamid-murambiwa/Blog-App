@@ -3,14 +3,13 @@
     <h1><%= @user.name %></h1>
     <p>Number of posts: <%= @user.posts_counter.to_i %></p>
     <h1>Posts:</h1>
+    <%= link_to "Create a post", new_user_post_path, class: "button" %>
     <section>
         <% @posts.each do |post| %>
-            <a href=<%= "http://127.0.0.1:3000/posts/show/?id=#{post.id}"%>>
-            <h2><%= post.title %><h2>
+            <h2><%= link_to post.title, user_post_path(post.user_id, post) %><h2>
             <p><%= post.text %></p>
             <p>comments: <%= post.comments_counter.to_i %></p>
             <p>likes: <%= post.likes_counter.to_i %></p>
-            </a>
         <% end %>
     </section>
 </div>

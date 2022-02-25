@@ -6,7 +6,7 @@
     <p>Number of posts: <%= user.posts_counter.to_i %></p>
     <p>Bio: <%= user.bio %></p>
     <div>
-    <% @user_posts.each do |post| %>
+    <% @posts.each do |post| %>
         <h2><%= post.title %></h2>
         <p><%= post.text %></p>
         <p>Comments: <%= post.comments_counter.to_i %></p>
@@ -16,7 +16,6 @@
     <% @@id = user.id %>
     <% end %>
   </section>
-    <a href=<%= "http://127.0.0.1:3000/posts/index/?id=#{@@id}" %>>
-    See all posts
-    </a>
+
+  <%= link_to 'See all posts', user_posts_path(@@id) %>
 </div>

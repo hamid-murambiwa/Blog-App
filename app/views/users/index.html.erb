@@ -1,11 +1,9 @@
 <div>
 <section>
   <% @users.each do |user| %>
-    <a href=<%= "users/show/?id=#{user.id}"%>>
     <%= image_tag(user.photo, width:'150px', height:'200px') %>
-    <h1><%= user.name %></h1>
+    <h1><%= link_to user.name, user_path(user) %></h1>
     <p>Number of posts: <%= user.posts_counter.to_i %></p>
-    </a>
   <% end %>
 </section>
 </div>
