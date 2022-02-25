@@ -15,10 +15,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(mass_params)
+    @post = current_user.posts.new(mass_params)
+    # @post.user_id = current_user.id
+    @post.comments_counter = nil
+    @post.likes_counter = nil
+    @post.update_posts_counter
 
     if @post.save
-      redirect_to('index')
+      redirect_to "/users/#{n_post.user.id}/posts/"
     else
     render('new')
     end
