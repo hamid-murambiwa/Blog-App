@@ -3,11 +3,15 @@
     <p>comments: <%= @post.comments_counter.to_i %></p>
     <p>likes: <%= @post.likes_counter.to_i %></p>
     <p><%= @post.text %></p>
+    <%= link_to likes_create_path(post_id: @post.id.to_s,u_id: @user.id.to_s), method: :put, class: 'like' do %>
+        <i class="far fa-heart">like</i>
+      <% end %>
     <section>
         <% @comments.each do |comment| %>
             <% user = User.find(comment.user_id) %>
             <h2><%= user.name + ":" %></h2>
             <p><%= comment.text %></p>
-    <% end %>
+        <% end %>
+        <%= render partial: "comments/comments", local: { post: @post } %>
     </section>
 </div>

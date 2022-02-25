@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    current_user = User.find(params[:user_id])
     @post = current_user.posts.new(mass_params)
     # @post.user_id = current_user.id
     @post.comments_counter = nil
@@ -22,7 +23,7 @@ class PostsController < ApplicationController
     @post.update_posts_counter
 
     if @post.save
-      redirect_to "/users/#{n_post.user.id}/posts/"
+      redirect_to posts_index_path
     else
     render('new')
     end
