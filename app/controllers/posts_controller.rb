@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to user_posts_path
     else
-    render('new')
+      render('new')
     end
   end
 
