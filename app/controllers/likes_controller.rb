@@ -2,11 +2,11 @@ class LikesController < ApplicationController
   def create
     set_like
     @like = @current_user.likes.new(user_id: params[:user_id], post_id: params[:post_id])
-    
+
     if @like.save
       redirect_to user_post_path(@like.user_id, @like.post_id), notice: 'Success!'
     else
-      return 'Error occured!'
+      redirect_to user_post_path(@like.user_id, @like.post_id), notice: 'Error occured!'
     end
   end
 
