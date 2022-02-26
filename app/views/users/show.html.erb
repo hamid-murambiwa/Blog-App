@@ -1,10 +1,9 @@
 <div>
   <section>
-    <% @user.each do |user| %>
-    <%= image_tag(user.photo, width:'150px', height:'200px') %>
-    <h1><%= user.name %></h1>
-    <p>Number of posts: <%= user.posts_counter.to_i %></p>
-    <p>Bio: <%= user.bio %></p>
+    <%= image_tag(@user.photo, width:'150px', height:'200px') %>
+    <h1><%= @user.name %></h1>
+    <p>Number of posts: <%= @user.posts_counter.to_i %></p>
+    <p>Bio: <%= @user.bio %></p>
     <div>
     <% @posts.each do |post| %>
         <h2><%= post.title %></h2>
@@ -13,9 +12,7 @@
         <p>Likes: <%= post.likes_counter.to_i %></p>
     <% end %>
     </div>
-    <% @@id = user.id %>
-    <% end %>
   </section>
 
-  <%= link_to 'See all posts', user_posts_path(@@id) %>
+  <%= link_to 'See all posts', user_posts_path(@user) %>
 </div>

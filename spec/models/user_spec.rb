@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.new(name: 'Hamid', bio: 'I am a web software Engineer'), photo: '', posts_counter: 0)
+    @user = User.new(name: 'Hamid', bio: 'I am a web software Engineer', photo: '', posts_counter: 0)
     4.times do |i|
       Post.new(title: "Computer specs", text: "All computer specs", comments_counter: 0, likes_counter: 0,
                user_id: @user.id)
