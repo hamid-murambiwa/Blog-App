@@ -34,5 +34,3 @@ comment3 = Comment.create(text:'Thank you very much for sharing your experience 
 comment4 = Comment.create(text:'We are really happy that your interaction with our brand was so positive', user: first_user, post:post3, post_id:3, user_id:1)
 comment5 = Comment.create(text:'I just want to let you know that we are acting upon your feedback to make some vital changes to the way we operate [list of changes].', user: second_user, post:post1, post_id:1, user_id:2)
 comment6 = Comment.create(text:'As you can see, the opinions of our clients help us to provide better experiences and grow as a company.', user: third_user, post:post2, post_id:2, user_id:3)
-
-INSERT INTO users VALUES ("name", "Tom", "photo", "https://i1.sndcdn.com/avatars-000339084123-nag0p1-t500x500.jpg", "bio", "Teacher from Mexico.", 0, "created_at", "2022-02-26 07:23:08.951646", "updated_at", "2022-02-26 07:23:08.951646");
