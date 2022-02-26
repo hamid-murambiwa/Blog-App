@@ -4,7 +4,7 @@ RSpec.describe Comment, type: :model do
   before(:each) do
     @user = User.new(id: 3, name: 'Peter', bio: 'I like watching sports', photo: '', posts_counter: 0)
     @post = Post.new(title: 'Post traumatic stress', text: 'Must looked into before it becomes fatal',
-                      comments_counter: 2, likes_counter: 25, user_id: @user.id)
+                    comments_counter: 2, likes_counter: 25, user_id: @user.id)
     @comment = Comment.new(text: 'Preach brother!', user_id: @user.id, post_id: @user.id)
   end
 
