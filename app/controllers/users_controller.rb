@@ -6,6 +6,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = @user.posts.includes(:comments)
+    @posts = @user.post.comments
   end
 end
