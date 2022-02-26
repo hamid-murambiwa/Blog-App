@@ -6,10 +6,10 @@ RSpec.describe Like, type: :model do
     @post = Post.new(
       title: 'Benefits of working out',
       text: 'Its good for your health',
-      comments_counter: 0, 
-      likes_counter: 9, 
+      comments_counter: 0,
+      likes_counter: 9,
       user_id: @user.id
-      )
+    )
     @like = Like.new(user_id: @user.id, post_id: @user.id)
   end
 

@@ -9,7 +9,7 @@ RSpec.describe Comment, type: :model do
       comments_counter: 2,
       likes_counter: 25,
       user_id: @user.id
-      )
+    )
     @comment = Comment.new(text: 'Preach brother!', user_id: @user.id, post_id: @user.id)
   end
 
