@@ -1,15 +1,31 @@
 <div>
-    <%= image_tag(@user.photo, width:'150px', height:'200px') %>
-    <h1><%= @user.name %></h1>
-    <p>Number of posts: <%= @user.posts_counter.to_i %></p>
-    <h1>Posts:</h1>
-    <%= link_to "Create a post", new_user_post_path, class: "button" %>
+<%= render 'layouts/alerts' if notice %>
+    <div class="user-con">
+        <%= image_tag(@user.photo, width:'150px', height:'160px', class:'user-img') %>
+        <div class="user-info">
+        <h1><%= @user.name %></h1>
+        <p>Number of posts: <%= @user.posts_counter.to_i %></p>
+        </div>
+    </div>
+    <div class="btn-con">
+        <%= link_to "Create a post", new_user_post_path, class: "post-btn" %>
+    </div>
     <section>
-        <% @posts.each do |post| %>
-            <h2><%= link_to post.title, user_post_path(post.user_id, post) %><h2>
-            <p><%= post.text %></p>
+        <% @user.posts.includes(:comments).each do |post| %>
+            <div class="user-card-2">
+            <h2><%= link_to post.title, user_post_path(post.user_id, post), class: "a-primary" %><h2>
+            <p class="post-text"><%= post.text %></p>
+            <div class="user-c-p">
             <p>comments: <%= post.comments_counter.to_i %></p>
             <p>likes: <%= post.likes_counter.to_i %></p>
+            </div>
+            <% post.comments.each do |comment| %>
+                <div class="comments-con">
+                <h3><%= @user.name %>:</h3>
+                <p class="post-text"><%= comment.text %></p>
+                </div>
+            <% end %>
+            </div>
         <% end %>
     </section>
 </div>

@@ -1,17 +1,33 @@
 <div>
-    <h1><%= @post.title %> by <%= @user.name %><h1>
-    <p>comments: <%= @post.comments_counter.to_i %></p>
-    <p>likes: <%= @post.likes_counter.to_i %></p>
+<%= render 'layouts/alerts' if notice %>
+    <div class="show-con">
+    <div class="show-header">
+        <h1><%= @post.title %> by <%= @user.name %><h1>
+        <div class="show-stats">
+        <p>comments: <%= @post.comments_counter.to_i %></p>
+        <p>likes: <%= @post.likes_counter.to_i %></p>
+        </div>
+    </div>
     <p><%= @post.text %></p>
     <%= button_to user_post_likes_url(@post.user_id, @post), method: :post, class: 'like' do %>
-        <i class="far fa-heart">like</i>
+        <i class="like-p">
+      <svg class="heart-icon" viewBox="0 0 24 24">
+        <path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/>
+      </svg>
+      <p><%= @post.likes_counter.to_i %></p>
+      </i>
       <% end %>
-    <section>
+    </div>
+    <section class="show-comments-con">
         <% @comments.each do |comment| %>
+            <div class="comments-con">
             <% user = User.find(comment.user_id) %>
             <h2><%= user.name + ":" %></h2>
             <p><%= comment.text %></p>
+            </div>
         <% end %>
-        <%= link_to 'Add comment', new_user_post_comment_path(@post.user_id, @post) %>
+        <div class="btn-con">
+        <%= link_to 'Add comment', new_user_post_comment_path(@post.user_id, @post), class: "submit-show-button" %>
+        </div>
     </section>
 </div>
