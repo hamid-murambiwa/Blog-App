@@ -14,9 +14,14 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET show' do
-    post = Post.create(user_id:2, title:"Wired", text: 'What does the economy have to do with
-      technological innovations of the future?', likes_counter: 0, comments_counter: 0)
-      
+    Post.create(
+      user_id: 2,
+      title: "Wired",
+      text: 'What does the economy have to do with technological innovations of the future?',
+      likes_counter: 0,
+      comments_counter: 0
+      )
+
     before(:example) { get user_post_path(2, 1) }
 
     it 'is a success' do
