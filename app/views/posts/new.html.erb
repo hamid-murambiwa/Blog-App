@@ -1,20 +1,26 @@
-<h1>Create a post</h1>
+<div class="form">
+<section class="form-group">
+<div class="btn-con">
+    <h1>Create a post</h1>
+</div>
 <%= form_with model: @post, url: user_posts_path, scope: :post, html: {class: "post-form-container"} do |form| %>
     <table>
     
     <tr>
-    <th><%= form.label :title, "Title", class: "label" %></th>
-    <td><%= form.text_field :title, required: true %></td>
+    <th class="label"><%= form.label :title, "Title" %></th>
+    <td><%= form.text_field :title, class: "post-input", placeholder: "Title", required: true %></td>
     </tr>
 
     <tr>
-        <th><%= form.label :title, "Content", class: "label" %></th>
-        <td><%= form.text_area :text, placeholder: "Type here...", rows: 10, required: true %></td>
+        <th class="label"><%= form.label :title, "Body", class: "label" %></th>
+        <td><%= form.text_area :text, class: "post-input", placeholder: "Type here...", rows: 10, required: true %></td>
     </tr>
 
     </table>
 
-    <div class="form-button">
+    <div class="btn-con">
         <%= form.submit "Save Post", class: "submit-button" %>
     </div>
 <% end %>
+</section>
+</div>

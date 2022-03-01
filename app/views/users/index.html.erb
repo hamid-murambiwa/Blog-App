@@ -1,9 +1,13 @@
 <div>
 <section>
   <% @users.each do |user| %>
-    <%= image_tag(user.photo, width:'150px', height:'200px') %>
-    <h1><%= link_to user.name, user_path(user) %></h1>
-    <p>Number of posts: <%= user.posts_counter.to_i %></p>
+    <div class="user-con">
+      <%= link_to image_tag(user.photo, width:'150px', height:'160px', class:'user-img'), user_path(user) %>
+      <div class="user-info">
+        <h1><%= link_to user.name, user_path(user), class: "a-primary" %></h1>
+        <p class="user-posts">Number of posts: <%= user.posts_counter.to_i %></p>
+      </div>
+    </div>
   <% end %>
 </section>
 </div>

@@ -40,11 +40,16 @@ RSpec.describe User, type: :model do
 
   describe 'user model methods tests' do
     before do
-        @user = User.create(name: 'Hamid', bio: 'I am a web software Engineer', photo: '', posts_counter: 0)
-        4.times do
-          Post.create(title: 'Computer specs', text: 'All computer specs', comments_counter: 0, likes_counter: 0,
-                   user_id: @user.id)
-        end
+      @user = User.create(name: 'Hamid', bio: 'I am a web software Engineer', photo: '', posts_counter: 0)
+      4.times do
+        Post.create(
+          title: 'Computer specs',
+          text: 'All computer specs',
+          comments_counter: 0,
+          likes_counter: 0,
+          user_id: @user.id
+          )
+      end
     end
 
     it 'returns the most recent posts and limit to 3 posts' do
