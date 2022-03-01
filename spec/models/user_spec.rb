@@ -48,7 +48,7 @@ RSpec.describe User, type: :model do
           comments_counter: 0,
           likes_counter: 0,
           user_id: @user.id
-          )
+        )
       end
     end
 
