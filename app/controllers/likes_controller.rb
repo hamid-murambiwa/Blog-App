@@ -3,11 +3,13 @@ class LikesController < ApplicationController
     set_like
     @like = @current_user.likes.new(user_id: params[:user_id], post_id: params[:post_id])
 
+  respond_to do |format|
     if @like.save
-      redirect_to user_post_path(@like.user_id, @like.post_id), notice: 'Success!'
+      format.html { redirect_to user_post_path(@like.user_id, @like.post_id), notice: 'You liked this post!' }
     else
-      redirect_to user_post_path(@like.user_id, @like.post_id), notice: 'Error occured!'
+      format.html { redirect_to user_post_path(@like.user_id, @like.post_id), notice: 'An error has occurred! Please try again.' }
     end
+  end
   end
 
   private

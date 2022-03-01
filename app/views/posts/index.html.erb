@@ -1,4 +1,5 @@
 <div>
+<%= render 'layouts/alerts' if notice %>
     <div class="user-con">
         <%= image_tag(@user.photo, width:'150px', height:'160px', class:'user-img') %>
         <div class="user-info">

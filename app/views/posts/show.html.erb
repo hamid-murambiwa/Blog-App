@@ -1,4 +1,5 @@
 <div>
+<%= render 'layouts/alerts' if notice %>
     <div class="show-con">
     <div class="show-header">
         <h1><%= @post.title %> by <%= @user.name %><h1>

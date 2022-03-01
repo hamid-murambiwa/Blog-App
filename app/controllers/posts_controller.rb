@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])\
+    @user = User.find(params[:user_id])
   end
 
   def show
@@ -20,11 +20,13 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @post.likes_counter = 0
 
+    respond_to do |format|
     if @post.save
-      redirect_to user_posts_path
+      format.html { redirect_to user_posts_path, notice: 'Post was successfully created.' }
     else
-      render('new')
+      format.html { render :new, alert: 'An error occured!' }
     end
+  end
   end
 
   private
