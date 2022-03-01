@@ -4,7 +4,6 @@ body {
   font-size: 1.2vw;
 }
 
-
 .btn-con {
   display: flex;
   justify-content: center;
@@ -74,6 +73,7 @@ table tr {
   width: 50%;
   padding: 10px;
 }
+
 .user-card-2 {
   font-size: 0.8vw;
   border: 1px solid green;
@@ -108,7 +108,7 @@ table tr {
 }
 
 .like {
-  border: 0px;
+  border: 0;
   background-color: #fff;
 }
 
@@ -145,10 +145,6 @@ table tr {
   border-radius: 5px;
   padding: 15px;
   margin-top: 5px;
-}
-
-.comments-con {
-  display: flex;
 }
 
 .show-con {
