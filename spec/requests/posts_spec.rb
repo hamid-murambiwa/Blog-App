@@ -2,15 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
   describe 'GET index' do
-
     User.create(
       name: 'Tom',
       photo: 'https://png.pngtree.com/png-vector/20210426/ourlarge/pngtree-young-man-cartoon-profile-vector-hd-image-png-image_3238138.jpg',
-      bio: "Dr. Jonas Frederikson is an orthopedic surgeon who believes that patient care should be a physician's first priority. He special
-            izes in laparoscopic procedures that minimize pain and recovery time, and has expertise in minimally invasive total knee replacement
-            surgeries. Awarded the Distinguished Service Award from the American Medical Association in 2017, Dr. Frederikson has been published
-            in both the Journal of the American Podiatric Medical Association and the New England Journal of Medicine. He holds a medical degree
-            from the Medical University of South Carolina, where he completed a postdoctoral fellowship in the field of orthopedic medicine.",
+      bio: "Dr. Jonas Frederikson is an orthopedic surgeon who believes that patient care should be a physician's
+            first priority. He specializes in laparoscopic procedures that minimize pain and recovery time, and
+            has expertise in minimally invasive total knee replacement surgeries. Awarded the Distinguished
+            Service Award from the American Medical Association in 2017, Dr. Frederikson has been published
+            in both the Journal of the American Podiatric Medical Association and the New England Journal of
+            Medicine. He holds a medical degree from the Medical University of South Carolina, where he
+            completed a postdoctoral fellowship in the field of orthopedic medicine.",
       posts_counter: 0
     )
 

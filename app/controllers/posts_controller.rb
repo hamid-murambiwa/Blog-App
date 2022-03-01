@@ -20,13 +20,11 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @post.likes_counter = 0
 
-    respond_to do |format|
     if @post.save
-      format.html { redirect_to user_posts_path, notice: 'Post was successfully created.' }
+      redirect_to user_posts_path, notice: 'Post was successfully created.'
     else
-      format.html { render :new, alert: 'An error occured!' }
+      render :new, alert: 'An error occured!'
     end
-  end
   end
 
   private
