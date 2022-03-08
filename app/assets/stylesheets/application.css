@@ -1,15 +1,60 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Login */
+
+.new_user, .cancel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user_email, #user_password, input[type=submit] {
+  width: 75%;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+input[type=text], input[type=password], textarea, button {
+  width: 75%;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+textarea  {
+  height: 4rem;
+}
+
+input[type=submit], button {
+  box-shadow: 3px 2px;
+}
+
+.actions, .button_to {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
