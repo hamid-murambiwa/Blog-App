@@ -12,8 +12,8 @@ RSpec.describe 'Posts', type: :request do
             in both the Journal of the American Podiatric Medical Association and the New England Journal of
             Medicine. He holds a medical degree from the Medical University of South Carolina, where he
             completed a postdoctoral fellowship in the field of orthopedic medicine.",
-      password: "mypassword",
-      email: "machipisajunior@gmail.com",
+      password: 'mypassword',
+      email: 'machipisajunior@gmail.com',
       posts_counter: 0
     )
 
