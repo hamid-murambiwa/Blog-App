@@ -179,7 +179,6 @@ table tr {
   padding: 10px;
 }
 
-
 .user-con {
   display: flex;
   justify-content: center;
@@ -242,7 +241,8 @@ table tr {
   font-weight: bold;
 }
 
-.new_user, .cancel{
+.new_user,
+.cancel{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -263,7 +263,9 @@ table tr {
   align-items: center;
 }
 
-#user_email, #user_password, input[type=submit] {
+#user_email,
+#user_password,
+input[type=submit] {
   width: 75%;
   height: 2rem;
   margin-bottom: 1.5rem;
@@ -274,7 +276,9 @@ table tr {
   font-weight: 700;
 }
 
-input[type=text], input[type=password], textarea, button {
+input[type=text],
+input[type=password],
+textarea, button {
   width: 75%;
   height: 2rem;
   margin-bottom: 1.5rem;
@@ -290,7 +294,8 @@ textarea  {
   height: 4rem;
 }
 
-input[type=submit], button {
+input[type=submit],
+button {
   box-shadow: 3px 2px;
 }
 
