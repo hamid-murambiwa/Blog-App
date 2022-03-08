@@ -242,7 +242,7 @@ table tr {
 }
 
 .new_user,
-.cancel{
+.cancel {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,7 +278,8 @@ input[type=submit] {
 
 input[type=text],
 input[type=password],
-textarea, button {
+textarea,
+button {
   width: 75%;
   height: 2rem;
   margin-bottom: 1.5rem;
@@ -289,8 +290,7 @@ textarea, button {
   font-weight: 700;
 }
 
-
-textarea  {
+textarea {
   height: 4rem;
 }
 
@@ -299,7 +299,8 @@ button {
   box-shadow: 3px 2px;
 }
 
-.actions, .button_to {
+.actions, 
+.button_to {
   display: flex;
   justify-content: center;
   align-items: center;
