@@ -37,23 +37,4 @@ RSpec.describe User, type: :model do
       expect(@user.posts_counter).to eq(0)
     end
   end
-
-  describe 'user model methods tests' do
-    before do
-      @user = User.create(name: 'Hamid', bio: 'I am a web software Engineer', photo: '', posts_counter: 0)
-      4.times do
-        Post.create(
-          title: 'Computer specs',
-          text: 'All computer specs',
-          comments_counter: 0,
-          likes_counter: 0,
-          user_id: @user.id
-        )
-      end
-    end
-
-    it 'returns the most recent posts and limit to 3 posts' do
-      expect(@user.recent_posts).to eq(@user.posts.last(3))
-    end
-  end
 end
