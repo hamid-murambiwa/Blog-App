@@ -20,8 +20,9 @@
       </i>
     <% end %>
 
+    <% if can? :manage, @post %>
     <%= button_to "Delete", user_post_url(@user.id, @post.id), :method => :delete %>
-
+    <% end %>
     </div>
     <section class="show-comments-con">
         <% @comments.each do |comment| %>
