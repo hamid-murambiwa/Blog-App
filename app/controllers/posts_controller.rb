@@ -33,9 +33,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
     @likes = Like.where(post_id: params[:id])
-    @likes.each do |like|
-        like.destroy
-    end
+    @likes.each(&:destroy)
     @post.destroy
     @user.posts_counter -= 1
     @user.save
