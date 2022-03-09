@@ -40,6 +40,11 @@ body {
 
 .comments-con p {
   margin-left: 15px;
+  width: 30%;
+}
+
+.comments-con h2 {
+  width: 40%;
 }
 
 .form-group {
@@ -314,5 +319,6 @@ button {
 }
 
 .com-del-btn {
-  width: auto;
+  width: 30%;
+  border: 2px solid green;
 }
