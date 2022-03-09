@@ -8,7 +8,9 @@
         <p>likes: <%= @post.likes_counter.to_i %></p>
         </div>
     </div>
+
     <p><%= @post.text %></p>
+
     <%= button_to user_post_likes_url(@post.user_id, @post), method: :post, class: 'like' do %>
         <i class="like-p">
       <svg class="heart-icon" viewBox="0 0 24 24">
@@ -16,7 +18,10 @@
       </svg>
       <p><%= @post.likes_counter.to_i %></p>
       </i>
-      <% end %>
+    <% end %>
+
+    <%= button_to "Delete", user_post_url(@user.id, @post.id), :method => :delete %>
+
     </div>
     <section class="show-comments-con">
         <% @comments.each do |comment| %>

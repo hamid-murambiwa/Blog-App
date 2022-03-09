@@ -30,10 +30,14 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
+    @likes = Like.where(post_id: params[:id])
+    @likes.each do |like|
+        like.destroy
+    end
     @post.destroy
-    @user.postsCounter -= 1
+    @user.posts_counter -= 1
     @user.save
-    redirect_to("/user/#{current_user.id}/post/")
+    redirect_to user_posts_path
     flash[:success] = 'Comment was deleted!'
   end
 
