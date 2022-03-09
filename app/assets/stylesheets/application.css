@@ -115,8 +115,9 @@ table tr {
 }
 
 .like {
-  border: 0;
+  box-shadow: none;
   background-color: #fff;
+  border: none;
 }
 
 .like-p {
@@ -154,7 +155,7 @@ table tr {
   align-items: center;
   border: 1px solid green;
   border-radius: 5px;
-  padding: 15px;
+  padding: 25px;
   margin-top: 5px;
 }
 
@@ -318,7 +319,10 @@ button {
   width: 100%;
 }
 
-.com-del-btn {
+.com-del-btn-con {
   width: 30%;
+}
+
+.com-del-btn {
   border: 2px solid green;
 }
