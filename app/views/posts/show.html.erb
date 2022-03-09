@@ -30,10 +30,10 @@
             <% user = User.find(comment.user_id) %>
             <h2><%= user.name + ":" %></h2>
             <p><%= comment.text %></p>
-            </div>
             <% if can? :manage, comment %>
-        <%= button_to "Delete", user_post_comment_path(@user.id, @post.id, comment.id), :method => :delete %>
+        <%= button_to "Delete", user_post_comment_path(@user.id, @post.id, comment.id), :method => :delete, class: 'com-del-btn' %>
         <% end %>
+            </div>
         <% end %>
         <div class="btn-con">
         <%= link_to 'Add comment', new_user_post_comment_path(@post.user_id, @post), class: "submit-show-button" %>

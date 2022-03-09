@@ -33,6 +33,8 @@ body {
 
 .comments-con {
   display: flex;
+  justify-content: center;
+  width: 100%;
   align-items: center;
 }
 
@@ -141,6 +143,10 @@ table tr {
 }
 
 .show-comments-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid green;
   border-radius: 5px;
   padding: 15px;
@@ -305,4 +311,8 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.com-del-btn {
+  width: auto;
 }
