@@ -27,6 +27,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
+    @post.destroy
+    @user.postsCounter -= 1
+    @user.save
+    redirect_to("/user/#{current_user.id}/post/")
+    flash[:success] = 'Comment was deleted!'
+  end
+
   private
 
   def mass_params
