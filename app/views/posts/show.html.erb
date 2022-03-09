@@ -22,6 +22,7 @@
     <% if can? :manage, @post %>
     <%= button_to "Delete", user_post_url(@user.id, @post.id), :method => :delete %>
     <% end %>
+
     </div>
     <section class="show-comments-con">
         <% @comments.each do |comment| %>
@@ -37,7 +38,7 @@
             </div>
         <% end %>
         <div class="btn-con">
-        <%= link_to 'Add comment', new_user_post_comment_path(@post.user_id, @post), class: "submit-show-button" %>
+        <%= render partial: "comments/comments" %>
         </div>
     </section>
 </div>

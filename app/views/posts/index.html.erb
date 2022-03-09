@@ -15,6 +15,7 @@
             <div class="user-card-2">
             <h2><%= link_to post.title, user_post_path(post.user_id, post), class: "a-primary" %><h2>
             <p class="post-text"><%= post.text %></p>
+
             <div class="user-c-p">
             <p>comments: <%= post.comments_counter.to_i %></p>
             <p>likes: <%= post.likes_counter.to_i %></p>

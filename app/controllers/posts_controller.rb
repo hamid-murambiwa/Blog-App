@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
+  # load_and_authorize_resource
   before_action :authenticate_user!
+
   def index
     @user = User.find(params[:user_id])
   end
@@ -21,6 +22,7 @@ class PostsController < ApplicationController
     @post.user = @current_user
     @post.comments_counter = 0
     @post.likes_counter = 0
+    @post.update_posts_counter
 
     if @post.save
       redirect_to user_posts_path, notice: 'Post was successfully created.'
@@ -32,9 +34,11 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
+    @comments = Comment.where(post_id: params[:id])
     @likes = Like.where(post_id: params[:id])
     @likes.each(&:destroy)
-    @post.destroy
+    @comments.each(&:destroy)
+    @post.destroy!
     @user.posts_counter -= 1
     @user.save
     redirect_to user_posts_path
