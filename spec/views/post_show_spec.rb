@@ -9,14 +9,14 @@ RSpec.describe 'Login', type: :feature do
         email: '1@gmail.com',
         confirmed_at: Time.now,
         posts_counter: 0
-      )
+        )
       @post = Post.new(
         user: @user,
         title: 'The Verge',
         text: 'The Verge surfaced in 2011 but is still considered one of the best',
         likes_counter: 0,
         comments_counter: 0
-      )
+        )
       @comment1 = Comment.create(text: 'Thank you very much for sharing', user: @user, post: @post)
       @comment2 = Comment.create(text: "We're happy you are satisfied", user: @user, post: @post)
       @comment3 = Comment.create(text: 'Thank you very much for sharing', user: @user, post: @post)

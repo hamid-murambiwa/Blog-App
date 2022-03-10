@@ -10,7 +10,7 @@ RSpec.describe 'Login', type: :feature do
         email: '1@gmail.com',
         confirmed_at: Time.now,
         posts_counter: 0
-      )
+        )
       @second_user = User.create(
         name: 'Murambiwa',
         password: '222222',
@@ -18,7 +18,7 @@ RSpec.describe 'Login', type: :feature do
         email: '2@gmail.com',
         confirmed_at: Time.now,
         posts_counter: 0
-      )
+        )
       visit root_path
       fill_in 'Email', with: '1@gmail.com'
       fill_in 'Password', with: '111111'
