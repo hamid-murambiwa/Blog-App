@@ -10,7 +10,7 @@ RSpec.describe 'Login', type: :feature do
         confirmed_at: Time.now,
         posts_counter: 0
       )
-      @post1 = Post.new(user: @user, title: 'The Verge', text: 'The Verge surfaced', likes_counter: 0, comments_counter: 0)
+      @post1 = Post.new(user: @user, title: 'The Verge', text: 'It surfaced', likes_counter: 0, comments_counter: 0)
       @post2 = Post.new(user: @user, title: 'CNET News', text: 'CNET technology', likes_counter: 0, comments_counter: 0)
       @post3 = Post.new(user: @user, title: 'Wired', text: 'Political scandals', likes_counter: 0, comments_counter: 0)
       @post1.update_posts_counter

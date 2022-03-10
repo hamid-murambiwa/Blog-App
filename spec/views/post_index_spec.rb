@@ -9,10 +9,10 @@ RSpec.describe 'Login', type: :feature do
         email: '1@gmail.com',
         confirmed_at: Time.now,
         posts_counter: 0
-        )
-      @post1 = Post.new(user: @user, title: 'The Verge', text: 'The Verge surfaced', likes_counter: 0, comments_counter: 0)
-      @post2 = Post.new(user: @user, title: 'CNET News', text: 'CNET to your technology', likes_counter: 0, comments_counter: 0)
-      @post3 = Post.new(user: @user, title: 'Wired', text: 'How do current technology', likes_counter: 0, comments_counter: 0)
+      )
+      @post1 = Post.new(user: @user, title: 'The Verge', text: 'It surfaced', likes_counter: 0, comments_counter: 0)
+      @post2 = Post.new(user: @user, title: 'CNET News', text: 'CNET technology', likes_counter: 0, comments_counter: 0)
+      @post3 = Post.new(user: @user, title: 'Wired', text: 'Current technology', likes_counter: 0, comments_counter: 0)
       @comment1 = Comment.create(text: 'Thank you very much', user: @user, post: @post1)
       @comment2 = Comment.create(text: "We're happy you are satisfied", user: @user, post: @post2)
       @comment3 = Comment.create(text: 'Thank you very much', user: @user, post: @post3)
