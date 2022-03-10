@@ -3,16 +3,22 @@ require 'rails_helper'
 RSpec.describe 'Login', type: :feature do
   describe 'User' do
     before(:each) do
-      @user = User.create(name: 'Hamid', password: '111111', bio: 'First time user', email: '1@gmail.com',
+      @user = User.create(
+        name: 'Hamid', password: '111111',
+        bio: 'First time user',
+        email: '1@gmail.com',
         confirmed_at: Time.now,
         posts_counter: 0
-        )
+      )
       @post1 = Post.new(user: @user, title: 'The Verge', text: 'The Verge surfaced', likes_counter: 0, comments_counter: 0)
-      @post2 = Post.new(user: @user, title: 'CNET News', text: 'CNET blogs', likes_counter: 0, comments_counter: 0)
-      @post3 = Post.new(user: @user, title: 'Wired', text: 'political scandals', likes_counter: 0, comments_counter: 0)
-      @post1.update_posts_counter.save
-      @post2.update_posts_counter.save
-      @post3.update_posts_counter.save
+      @post2 = Post.new(user: @user, title: 'CNET News', text: 'CNET technology', likes_counter: 0, comments_counter: 0)
+      @post3 = Post.new(user: @user, title: 'Wired', text: 'Political scandals', likes_counter: 0, comments_counter: 0)
+      @post1.update_posts_counter
+      @post2.update_posts_counter
+      @post3.update_posts_counter
+      @post1.save
+      @post2.save
+      @post3.save
       visit root_path
       fill_in 'Email', with: '1@gmail.com'
       fill_in 'Password', with: '111111'
