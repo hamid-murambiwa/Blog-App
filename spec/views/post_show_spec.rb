@@ -47,9 +47,9 @@ RSpec.describe 'Login', type: :feature do
       expect(page).to have_content('Hamid:')
     end
     it 'Should show the comment each commentor left' do
-      expect(page).to have_content('Thank you very much for sharing your experience with us')
-      expect(page).to have_content("We're happy you are satisfied with the quality of our")
-      expect(page).to have_content('Thank you very much for sharing your experience with us')
+      expect(page).to have_content('Thank you very much for sharing')
+      expect(page).to have_content("We're happy you are satisfied")
+      expect(page).to have_content('Thank you very much for sharing')
     end
   end
 end
