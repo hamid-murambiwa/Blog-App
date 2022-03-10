@@ -66,7 +66,7 @@ RSpec.describe 'Login', type: :feature do
         expect(page).to have_content('See all post')
     end
 
-    it "When a user clicks on the 'see all posts' button the app should redirect you to that post's show page" do
+    it "When a user clicks on the 'see all posts' button the app should redirect you to that post's index page" do
         click_on 'See all posts'
         expect(page).to have_current_path user_posts_path(@user)
     end
