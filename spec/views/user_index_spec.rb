@@ -14,12 +14,12 @@ RSpec.describe 'Login', type: :feature do
         visit root_path
     end
 
-    it 'Should show the usernames all the users' do
+    it 'Should show the usernames of all the users' do
         expect(page).to have_content('Hamid')
         expect(page).to have_content('Murambiwa')
     end
 
-    it 'Should show the profile picture for each user' do
+    it 'Should show the profile picture of each user' do
         image = page.all('img')
         expect(image.size).to eql(2)
     end
