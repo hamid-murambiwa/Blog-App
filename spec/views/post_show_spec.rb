@@ -13,13 +13,13 @@ RSpec.describe 'Login', type: :feature do
       @post = Post.new(
         user: @user,
         title: 'The Verge',
-        text: 'The Verge surfaced in 2011 but is still considered one of the best tech blogs 2020 has to offer.',
+        text: 'The Verge surfaced in 2011 but is still considered one of the best',
         likes_counter: 0,
         comments_counter: 0
       )
-      @comment1 = Comment.create(text: 'Thank you very much for sharing your experience with us', user: @user, post: @post)
-      @comment2 = Comment.create(text: "We're happy you are satisfied with the quality of our", user: @user, post: @post)
-      @comment3 = Comment.create(text: 'Thank you very much for sharing your experience with us', user: @user, post: @post)
+      @comment1 = Comment.create(text: 'Thank you very much for sharing', user: @user, post: @post)
+      @comment2 = Comment.create(text: "We're happy you are satisfied", user: @user, post: @post)
+      @comment3 = Comment.create(text: 'Thank you very much for sharing', user: @user, post: @post)
       @post.update_posts_counter
       @post.save
       visit root_path
@@ -41,7 +41,7 @@ RSpec.describe 'Login', type: :feature do
       expect(page).to have_content('likes: 0')
     end
     it "Should show the post's body" do
-      expect(page).to have_content('The Verge surfaced in 2011 but is still considered one of the best tech blogs 2020 has to offer.')
+      expect(page).to have_content('The Verge surfaced in 2011')
     end
     it 'Should show the username of each commentor' do
       expect(page).to have_content('Hamid:')

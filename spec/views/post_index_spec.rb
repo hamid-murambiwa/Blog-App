@@ -2,38 +2,31 @@ require 'rails_helper'
 RSpec.describe 'Login', type: :feature do
   describe 'User' do
     before(:each) do
-      @user = User.create(
-        name: 'Hamid',
-        password: '111111',
-        bio: 'First time user',
-        email: '1@gmail.com',
-        confirmed_at: Time.now,
-        posts_counter: 0
-      )
+      @user = User.create(name: 'Hamid', password: '111111', bio: 'First time user', email: '1@gmail.com', confirmed_at: Time.now, posts_counter: 0)
       @post1 = Post.new(
-        user:@user,
-        title:"The Verge",
+        user: @user,
+        title: 'The Verge',
         text: 'The Verge surfaced in 2011 but is still considered one of the best tech blogs 2020 has to offer.',
         likes_counter: 0,
         comments_counter: 0
       )
       @post2 = Post.new(
-        user:@user,
-        title:"CNET News",
+        user: @user,
+        title: 'CNET News',
         text: 'add CNET to your technology blogs list immediately',
         likes_counter: 0,
         comments_counter: 0
       )
       @post3 = Post.new(
-        user:@user,
-        title:"Wired",
+        user: @user,
+        title: 'Wired',
         text: 'How do current technology trends relate to today’s most prominent political scandals',
         likes_counter: 0,
         comments_counter: 0
       )
-      @comment1 = Comment.create(text:'Thank you very much for sharing your experience with us.', user:@user, post:@post1)
-      @comment2 = Comment.create(text:"We're happy you are satisfied with the quality of our", user:@user, post:@post2)
-      @comment3 = Comment.create(text:'Thank you very much for sharing your experience with us', user:@user, post:@post3)
+      @comment1 = Comment.create(text: 'Thank you very much for sharing your experience with us.', user: @user, post: @post1)
+      @comment2 = Comment.create(text: "We're happy you are satisfied with the quality of our", user: @user, post: @post2)
+      @comment3 = Comment.create(text: 'Thank you very much for sharing your experience with us', user: @user, post: @post3)
       @post1.update_posts_counter
       @post2.update_posts_counter
       @post3.update_posts_counter

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Login', type: :feature do
   describe 'User' do
     before(:each) do
-      @firstUser = User.create(
+      @first_user = User.create(
         name: 'Hamid',
         password: '111111',
         bio: 'First time user',
@@ -11,7 +11,7 @@ RSpec.describe 'Login', type: :feature do
         confirmed_at: Time.now,
         posts_counter: 0
       )
-      @secondUser = User.create(
+      @second_user = User.create(
         name: 'Murambiwa',
         password: '222222',
         bio: 'My second account',
@@ -42,7 +42,7 @@ RSpec.describe 'Login', type: :feature do
 
     it "When a user clicks on a user the app should redirect you to the user's show page" do
       click_on 'Hamid'
-      expect(page).to have_current_path user_path(@firstUser)
+      expect(page).to have_current_path user_path(@first_user)
       expect(page).to have_no_content('Murambiwa')
     end
   end

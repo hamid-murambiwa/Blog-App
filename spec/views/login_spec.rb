@@ -10,7 +10,7 @@ RSpec.describe 'Login', type: :feature do
         email: '1@gmail.com',
         confirmed_at: Time.now,
         posts_counter: 0
-    )
+      )
     end
     it 'should show the correct content' do
       visit new_user_session_path
