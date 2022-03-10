@@ -40,7 +40,7 @@ RSpec.describe 'Login', type: :feature do
       expect(page).to have_content('The Verge')
     end
     it 'Should show some of the posts body' do
-      expect(page).to have_content('The Verge surfaced')
+      expect(page).to have_content('It surfaced')
     end
     it 'Should show the first comment on a post' do
       expect(page).to have_content('Thank you very much')
