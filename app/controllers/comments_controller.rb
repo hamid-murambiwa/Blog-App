@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
   def create
     @current_user = User.find(params[:user_id])
     @comment = Comment.new(comment_params)
+    @post = Post.find(params[:post_id])
 
     set_comment
 
@@ -14,6 +15,16 @@ class CommentsController < ApplicationController
     else
       render :new, alert: 'An error has occurred while creating your comment!'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    @post.comments_counter -= 1
+    @post.save
+    redirect_to user_post_path(@comment.user_id, @comment.post_id)
+    flash[:success] = 'Comment was deleted!'
   end
 
   private

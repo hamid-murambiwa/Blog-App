@@ -64,7 +64,7 @@ Run tests with:
 - Ruby on Rails
 - Postgresql
 
-## Author
+## Authors
 
 👤 **Hamid Murambiwa**
 
@@ -72,6 +72,11 @@ Run tests with:
 - Twitter: [@Hamid87789454](https://twitter.com/Hamid87789454/)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/hamid-murambiwa/)
 
+👤 ** Uchechi Ugboaja **
+
+- [Github](https://github.com/Ugboaja-Uchechi)
+
+- [LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
 
 ## 🤝 Contributing
 

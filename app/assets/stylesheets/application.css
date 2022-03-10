@@ -33,11 +33,18 @@ body {
 
 .comments-con {
   display: flex;
+  justify-content: center;
+  width: 100%;
   align-items: center;
 }
 
 .comments-con p {
   margin-left: 15px;
+  width: 30%;
+}
+
+.comments-con h2 {
+  width: 40%;
 }
 
 .form-group {
@@ -108,8 +115,9 @@ table tr {
 }
 
 .like {
-  border: 0;
+  box-shadow: none;
   background-color: #fff;
+  border: none;
 }
 
 .like-p {
@@ -141,9 +149,13 @@ table tr {
 }
 
 .show-comments-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid green;
   border-radius: 5px;
-  padding: 15px;
+  padding: 25px;
   margin-top: 5px;
 }
 
@@ -305,4 +317,12 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.com-del-btn-con {
+  width: 30%;
+}
+
+.com-del-btn {
+  border: 2px solid green;
 }

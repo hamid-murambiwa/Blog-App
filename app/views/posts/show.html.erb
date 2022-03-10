@@ -8,15 +8,21 @@
         <p>likes: <%= @post.likes_counter.to_i %></p>
         </div>
     </div>
+
     <p><%= @post.text %></p>
-    <%= button_to user_post_likes_url(@post.user_id, @post), method: :post, class: 'like' do %>
+        <%= button_to user_post_likes_url(@post.user_id, @post), method: :post, class: 'like' do %>
         <i class="like-p">
       <svg class="heart-icon" viewBox="0 0 24 24">
         <path d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/>
       </svg>
       <p><%= @post.likes_counter.to_i %></p>
       </i>
-      <% end %>
+    <% end %>
+
+    <% if can? :manage, @post %>
+    <%= button_to "Delete", user_post_url(@user.id, @post.id), :method => :delete %>
+    <% end %>
+
     </div>
     <section class="show-comments-con">
         <% @comments.each do |comment| %>
@@ -24,10 +30,15 @@
             <% user = User.find(comment.user_id) %>
             <h2><%= user.name + ":" %></h2>
             <p><%= comment.text %></p>
+            <% if can? :manage, comment %>
+            <div class='com-del-btn-con'>
+        <%= button_to "Delete", user_post_comment_path(@user.id, @post.id, comment.id), :method => :delete,  :class => 'com-del-btn' %>
+        </div>
+        <% end %>
             </div>
         <% end %>
         <div class="btn-con">
-        <%= link_to 'Add comment', new_user_post_comment_path(@post.user_id, @post), class: "submit-show-button" %>
+        <%= render partial: "comments/comments" %>
         </div>
     </section>
 </div>
