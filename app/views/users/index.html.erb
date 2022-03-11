@@ -1,4 +1,5 @@
 <div>
+<%=link_to "See Token", apitoken_user_url(current_user), class: "nav-link"%>
 <section>
   <% @users.each do |user| %>
     <div class="user-con">
