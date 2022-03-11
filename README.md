@@ -20,15 +20,15 @@
 
 - Open the command prompt in this directory.
 
-- Clone of the Repo
+- Clone of the Repo:
 
       $ git clone https://github.com/hamid-murambiwa/Blog-App.git
 
-- Go to the repository folder in your command prompt.
+- Go to the repository folder in your command prompt and navigate into the project file:
 
       $ cd Blog-App
 
-- Install Ruby on Rails Gems:
+- Install the Ruby on Rails Gems:
 
       $ bundle install or bundle i
 
