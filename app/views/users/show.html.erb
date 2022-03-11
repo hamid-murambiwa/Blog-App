@@ -27,5 +27,6 @@
   </section>
   <div class="btn-con">
     <%= link_to 'See all posts', user_posts_path(@user), class: "posts-btn" %>
+    <%=link_to "See Token", apitoken_user_url(current_user), class: "nav-link"%>
   </div>
 </div>
