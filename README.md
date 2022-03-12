@@ -2,68 +2,91 @@
 
 # Blog-App
 
-> This is the Ruby on Rails application, in this project I will create a blog with ruby on rails with Postgresql database.
-
+> Blog-App a simple web application built with the Ruby on Rails web framework. It shows a list of posts and empowers readers to interact with them by adding comments and liking posts.
+> It has the following features:
+- Authentication for users.
+- A user or the admin user can delete posts and comments.
+- Can be used as a back-end API through API endpoints.
 ## Built With
 
-- Ruby
 - Ruby on Rails
-- Git
 - Postgresql
+- Ruby on Rails Gems
 
+---
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
-
-- Copy Repo Link
-
-```
-https://github.com/hamid-murambiwa/Blog-App.git
-```
-- Get the directory that you want to clone the repository.
+> To get a local copy up and running please follow these steps:
 
 - Open the command prompt in this directory.
 
-- Copy clone of the Repo
+- Clone of the Repo:
 
-```
-git clone https://github.com/hamid-murambiwa/Blog-App.git
-```
+      $ git clone https://github.com/hamid-murambiwa/Blog-App.git
 
-- Go to the repository folder in your command prompt.
+- Go to the repository folder in your command prompt and navigate into the project file:
 
-```
-cd Blog-App
-```
-- Install bundles
+      $ cd Blog-App
 
-```
-bundle install or bundle i
-```
+- Install the Ruby on Rails Gems:
 
-- Run `rails new Project --database=postgresql` to create a new project with Postgresql database
-- Run `rails s` to run the code!
-- Run `rubocop` to find and fix linters
-- Run `rails db:migrate` for database setup
-```
+      $ bundle install or bundle i
+
+- To analyze and format the applictaion code run:
+
+      $ rubocop -A
+
+- Start the server:
+
+      $ rails s
+
+---
 
 ## To run the tests
 
-Install rspec with:
-`bundle install`
-and
-`rails generate rpesc:install`
+- Install rspec:
 
-Run tests with:
-`rspec spec`
+      $ bundle install
+
+- and
+
+      $ rails generate rpesc:install
+
+- run all rspec tests:
+
+      $ rspec spec
 
 
+---
+## Routes to access the API
+- First login:
+```
+    http://localhost:3000/users/sign_in
+```
+
+- Route to view the API token:
+```
+    http://localhost:3000/api/v1/users/:id
+```
+
+- Route to list all a user's posts:
+```
+    http://localhost:3000/api/v1/users/:user_id/posts
+```
+
+- Route to list all comments for a user's post:
+```
+    http://localhost:3000/api/v1/users/:user_id/posts/:post_id/comments
+```
+
+---
 ## Prerequisites
 
 - Ruby
 - Ruby on Rails
 - Postgresql
 
+---
 ## Authors
 
 👤 **Hamid Murambiwa**
@@ -72,22 +95,20 @@ Run tests with:
 - Twitter: [@Hamid87789454](https://twitter.com/Hamid87789454/)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/hamid-murambiwa/)
 
-👤 ** Uchechi Ugboaja **
+👤 **Uchechi Ugboaja**
 
-- [Github](https://github.com/Ugboaja-Uchechi)
+- GitHub: [@Ugboaja-Uchechi](https://github.com/Ugboaja-Uchechi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
 
-- [LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+>Contributions, issues, and feature requests are welcome!
+>Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
-Give a ⭐️ if you like this project !
-
+>Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
@@ -95,4 +116,4 @@ Give a ⭐️ if you like this project !
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+>This project is [MIT](./MIT.md) licensed.

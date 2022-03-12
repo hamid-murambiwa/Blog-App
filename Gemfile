@@ -33,6 +33,10 @@ gem 'devise'
 
 gem 'cancancan'
 
+gem 'oj'
+
+gem 'rabl'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
